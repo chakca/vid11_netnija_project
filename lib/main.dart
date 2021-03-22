@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main(){
   runApp(MaterialApp(
-    home: Home()
+      home: Home()
   ));
 }
 
@@ -14,41 +14,39 @@ class Home extends StatelessWidget {
         centerTitle: true,
         title: Text('ugu'),
       ),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('Row Children widget 1'),
-          FlatButton(
-            onPressed: (){
-              print('Clocked row widget 2');
-            },
-            color: Colors.red[900],
-            child: Text("Clockme"),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Text('R1C1'),
+              Text('R2 C1'),
+              Container(
+                color: Colors.pink,
+                padding: EdgeInsets.all(30),
+                child: Text('R3 C1 container'),
+              ),
+            ],
           ),
           Container(
+            padding: EdgeInsets.all(20),
             color: Colors.cyan,
-            padding: EdgeInsets.all(30),
-            child: Text('Widget 4 row body'),
+            child: Text('First column'),
           ),
-        ]
+          Container(
+            padding: EdgeInsets.all(30),
+            color: Colors.red,
+            child: Text('Second column'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40),
+            color: Colors.lightGreen,
+            child: Text('Third column'),
+          ),
+        ],
       ),
-      /*body: Padding(
-        padding: EdgeInsets.all(90),
-        // not allowed in padding margin: EdgeInsets.all(20),
-        //padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
-        //padding: EdgeInsets.all(20),
-        // not allowed in padding color: Colors.grey[400],
-        child: Text('Padding Text'),
-      ),*/
-      /*body: Container(
-        padding: EdgeInsets.fromLTRB(10, 20, 30.0, 60.0),
-        margin: EdgeInsets.all(20),
-        //padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
-        //padding: EdgeInsets.all(20),
-        color: Colors.grey[400],
-        child: Text('Conatiner Text'),
-      ),*/
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         child: Text('+'),

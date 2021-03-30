@@ -21,8 +21,8 @@ class Home extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Text('R1C1'),
-              Text('R2 C1'),
+              Text('R1RRRCCCCC1'),
+              Text('R22222 C1111'),
               Container(
                 color: Colors.pink,
                 padding: EdgeInsets.all(30),

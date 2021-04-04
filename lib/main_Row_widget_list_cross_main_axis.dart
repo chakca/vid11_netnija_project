@@ -19,12 +19,13 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text('Row Children widget 1'),
-          FlatButton(
+          TextButton(
             onPressed: (){
               print('Clocked row widget 2');
             },
-            color: Colors.red[900],
+            //color: Colors.red[900],
             child: Text("Clockme"),
+
           ),
           Container(
             color: Colors.cyan,

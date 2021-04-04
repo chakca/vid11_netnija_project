@@ -12,9 +12,41 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('ugu'),
+        title: Text('14th Video on net ninja playlist'),
       ),
-      body: Column(
+      body:
+          Row(
+            children: <Widget>[
+              Expanded(
+                  flex: 3,
+                  child: Image.asset('assets/sp1.jpg')),
+              Expanded(
+                flex: 3, //divide the width in portions add all flex in that row
+                child: Container(
+                  padding: EdgeInsets.all(30),
+                  color: Colors.cyan,
+                  child: Text('1')
+                ),
+              ),
+              Expanded(
+                flex: 3,
+                child: Container(
+                    padding: EdgeInsets.all(30),
+                    color: Colors.pinkAccent,
+                    child: Text('2')
+                ),
+              ),
+              Expanded(
+              flex: 3,
+                child: Container(
+                    padding: EdgeInsets.all(30),
+                    color: Colors.amberAccent,
+                    child: Text('3')
+                ),
+              ),
+            ],
+          ),
+/*      Column(
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -36,17 +68,19 @@ class Home extends StatelessWidget {
             child: Text('First column'),
           ),
           Container(
-            padding: EdgeInsets.all(30),
-            color: Colors.red,
-            child: Text('Second column'),
-          ),
-          Container(
             padding: EdgeInsets.all(40),
             color: Colors.lightGreen,
             child: Text('Third column'),
           ),
+          Container(
+            padding: EdgeInsets.all(30),
+            color: Colors.red,
+            child: Text('Second column'),
+          ),
         ],
       ),
+
+ */
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         child: Text('+'),
